@@ -18,19 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QjE-tA-uVq">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.25" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="QjE-tA-uVq">
                                 <rect key="frame" x="0.0" y="20" width="414" height="628"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="AAL-r8-lcm" userLabel="original">
-                                        <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT2-C2-BI7">
-                                        <rect key="frame" x="186" y="303" width="41" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-ZC-bq7" userLabel="filtered">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,21 +28,16 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="TT2-C2-BI7" firstAttribute="centerX" secondItem="QjE-tA-uVq" secondAttribute="centerX" id="0FG-Bq-7d2"/>
-                                    <constraint firstItem="TT2-C2-BI7" firstAttribute="centerX" secondItem="QjE-tA-uVq" secondAttribute="centerX" id="7Ot-zQ-i9G"/>
-                                    <constraint firstItem="TT2-C2-BI7" firstAttribute="centerY" secondItem="QjE-tA-uVq" secondAttribute="centerY" id="GBU-j5-ort"/>
-                                    <constraint firstItem="LAa-ZC-bq7" firstAttribute="leading" secondItem="AAL-r8-lcm" secondAttribute="leading" id="I2b-mV-LL9"/>
-                                    <constraint firstItem="AAL-r8-lcm" firstAttribute="top" secondItem="QjE-tA-uVq" secondAttribute="top" id="KZb-fI-bJD"/>
+                                    <constraint firstAttribute="bottom" secondItem="LAa-ZC-bq7" secondAttribute="bottom" id="ES3-0T-Hjs"/>
                                     <constraint firstItem="LAa-ZC-bq7" firstAttribute="leading" secondItem="QjE-tA-uVq" secondAttribute="leading" id="WZL-tz-iWY"/>
-                                    <constraint firstItem="TT2-C2-BI7" firstAttribute="centerY" secondItem="QjE-tA-uVq" secondAttribute="centerY" id="ZFF-kI-qNX"/>
-                                    <constraint firstAttribute="bottom" secondItem="LAa-ZC-bq7" secondAttribute="bottom" constant="494" id="d9f-Qn-V9r"/>
-                                    <constraint firstItem="LAa-ZC-bq7" firstAttribute="bottom" secondItem="AAL-r8-lcm" secondAttribute="bottom" id="gXs-Jo-0h9"/>
-                                    <constraint firstItem="AAL-r8-lcm" firstAttribute="top" secondItem="LAa-ZC-bq7" secondAttribute="top" id="iPf-yi-L6l"/>
                                     <constraint firstAttribute="trailing" secondItem="LAa-ZC-bq7" secondAttribute="trailing" constant="314" id="kfQ-7S-uUL"/>
-                                    <constraint firstItem="LAa-ZC-bq7" firstAttribute="trailing" secondItem="AAL-r8-lcm" secondAttribute="trailing" id="lPM-jk-ZbQ"/>
+                                    <constraint firstItem="LAa-ZC-bq7" firstAttribute="top" secondItem="QjE-tA-uVq" secondAttribute="top" id="lhj-af-ZDd"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Qhy-kH-zpm" appends="YES" id="Nk7-Gs-c1N"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fvj-6c-0gv"/>
+                                    <outletCollection property="gestureRecognizers" destination="Qhy-kH-zpm" appends="YES" id="zP2-HB-yAR"/>
+                                    <outletCollection property="gestureRecognizers" destination="uvh-PA-PQZ" appends="YES" id="82Z-ae-EcV"/>
+                                    <outletCollection property="gestureRecognizers" destination="2Hd-oo-Gn2" appends="YES" id="nwj-Qf-wQS"/>
                                 </connections>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-cb-B5d">
@@ -71,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkp-C3-534">
-                                        <rect key="frame" x="76" y="0.0" width="86" height="44"/>
+                                        <rect key="frame" x="76" y="0.0" width="85.5" height="44"/>
                                         <state key="normal" title="Filter">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -80,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-hN-fn0">
-                                        <rect key="frame" x="162" y="0.0" width="155" height="44"/>
+                                        <rect key="frame" x="161" y="0.0" width="154.5" height="44"/>
                                         <state key="normal" title="Compare">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -104,12 +89,21 @@
                                     <constraint firstAttribute="height" constant="44" id="PkG-pp-RE3"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT2-C2-BI7">
+                                <rect key="frame" x="169" y="358.5" width="75" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" label="infoLabel"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QjE-tA-uVq" firstAttribute="trailing" secondItem="Nnq-cb-B5d" secondAttribute="trailing" id="A6O-nx-OxG"/>
                             <constraint firstItem="Nnq-cb-B5d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Btz-gb-QD8"/>
                             <constraint firstItem="QjE-tA-uVq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="H8U-Xd-LAl"/>
+                            <constraint firstItem="TT2-C2-BI7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ohd-SZ-3ia"/>
+                            <constraint firstItem="TT2-C2-BI7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpZ-wB-GgX"/>
                             <constraint firstAttribute="trailing" secondItem="Nnq-cb-B5d" secondAttribute="trailing" id="Yej-le-2VH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nnq-cb-B5d" secondAttribute="bottom" id="lan-Q0-SCz"/>
                             <constraint firstItem="QjE-tA-uVq" firstAttribute="leading" secondItem="Nnq-cb-B5d" secondAttribute="leading" id="uoW-os-DJg"/>
@@ -133,24 +127,36 @@
                         <outlet property="gammaButtonLabel" destination="hcG-b4-wjf" id="lAR-27-rXg"/>
                         <outlet property="greenButtonLabel" destination="eJm-9A-ZXa" id="50B-DX-gfK"/>
                         <outlet property="greyscaleButtonLabel" destination="j4m-OU-C2k" id="Fzx-pu-wxD"/>
-                        <outlet property="infoLabel" destination="TT2-C2-BI7" id="9LR-KH-nvM"/>
+                        <outlet property="imageScrollView" destination="QjE-tA-uVq" id="6Au-Px-rsa"/>
+                        <outlet property="infoLabel" destination="TT2-C2-BI7" id="b1U-5l-8me"/>
                         <outlet property="inversionButtonLabel" destination="fFz-GF-rQe" id="rkY-X1-2A1"/>
                         <outlet property="myScrollView" destination="etW-Nj-KKx" id="389-4Z-Oat"/>
                         <outlet property="onNewLabel" destination="gQh-rQ-PZC" id="QLO-Q4-fXi"/>
                         <outlet property="onSaveLabel" destination="qUp-35-lvT" id="0Ae-Vi-PQ9"/>
                         <outlet property="onShareLabel" destination="OrI-5e-ZrA" id="pF7-qu-uWk"/>
-                        <outlet property="originalImageView" destination="AAL-r8-lcm" id="SZz-1Q-eiL"/>
                         <outlet property="redButtonLabel" destination="LT8-SO-TII" id="ocp-7B-SHK"/>
                         <outlet property="scaleButtonLabel" destination="3P6-zk-iZn" id="rXT-oA-VVz"/>
                         <outlet property="sliderValue" destination="vgd-Tg-mCa" id="yu0-fy-ffG"/>
                         <outlet property="solarisationButtonLabel" destination="2Z7-Kl-f92" id="qsL-jt-JCy"/>
-                        <outlet property="tapRecogniser" destination="Qhy-kH-zpm" id="k0e-2Z-yhh"/>
+                        <outlet property="tap1Recogniser" destination="Qhy-kH-zpm" id="xbM-AQ-L4y"/>
+                        <outlet property="tap2Recogniser" destination="uvh-PA-PQZ" id="R1y-L9-V5X"/>
+                        <outlet property="tap3Recogniser" destination="2Hd-oo-Gn2" id="pAJ-Iv-HOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer delaysTouchesBegan="YES" id="Qhy-kH-zpm">
+                <tapGestureRecognizer delaysTouchesBegan="YES" id="Qhy-kH-zpm" userLabel="Tap1 Gesture Recognizer">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="dbd-IU-J7p"/>
+                        <action selector="onTap1:" destination="BYZ-38-t0r" id="3uM-ye-8Nr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer delaysTouchesBegan="YES" numberOfTapsRequired="2" id="uvh-PA-PQZ" userLabel="Tap2 Gesture Recognizer">
+                    <connections>
+                        <action selector="onTap2:" destination="BYZ-38-t0r" id="8Wt-kQ-KvS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer delaysTouchesBegan="YES" numberOfTapsRequired="2" numberOfTouchesRequired="2" id="2Hd-oo-Gn2" userLabel="Tap3 Gesture Recognizer">
+                    <connections>
+                        <action selector="onTap3:" destination="BYZ-38-t0r" id="OyH-MF-MDU"/>
                     </connections>
                 </tapGestureRecognizer>
                 <view opaque="NO" alpha="0.0" contentMode="scaleToFill" id="haQ-La-Kzt" userLabel="Secondary Menu">
@@ -178,8 +184,8 @@
                                                 <action selector="onSaveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1r-gm-wAC"/>
                                             </connections>
                                         </button>
-                                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-125" maxValue="125" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kt-C8b">
-                                            <rect key="frame" x="68" y="0.0" width="288" height="45"/>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-125" maxValue="125" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kt-C8b">
+                                            <rect key="frame" x="68" y="0.0" width="296" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="XhH-bH-O90"/>
                                                 <constraint firstAttribute="height" constant="44" id="vwf-k8-bTD"/>
@@ -189,7 +195,7 @@
                                             </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgd-Tg-mCa">
-                                            <rect key="frame" x="364" y="0.0" width="31" height="44"/>
+                                            <rect key="frame" x="372" y="0.0" width="23" height="44"/>
                                             <accessibility key="accessibilityConfiguration" hint="Slider Value"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="132" id="E0q-jH-kpT"/>
