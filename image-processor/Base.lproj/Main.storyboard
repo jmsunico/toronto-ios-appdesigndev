@@ -35,9 +35,9 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Fvj-6c-0gv"/>
-                                    <outletCollection property="gestureRecognizers" destination="Qhy-kH-zpm" appends="YES" id="zP2-HB-yAR"/>
                                     <outletCollection property="gestureRecognizers" destination="uvh-PA-PQZ" appends="YES" id="82Z-ae-EcV"/>
                                     <outletCollection property="gestureRecognizers" destination="2Hd-oo-Gn2" appends="YES" id="nwj-Qf-wQS"/>
+                                    <outletCollection property="gestureRecognizers" destination="zbB-eQ-4vs" appends="YES" id="3di-0O-mDT"/>
                                 </connections>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-cb-B5d">
@@ -138,17 +138,17 @@
                         <outlet property="scaleButtonLabel" destination="3P6-zk-iZn" id="rXT-oA-VVz"/>
                         <outlet property="sliderValue" destination="vgd-Tg-mCa" id="yu0-fy-ffG"/>
                         <outlet property="solarisationButtonLabel" destination="2Z7-Kl-f92" id="qsL-jt-JCy"/>
-                        <outlet property="tap1Recogniser" destination="Qhy-kH-zpm" id="xbM-AQ-L4y"/>
+                        <outlet property="tap1Recogniser" destination="zbB-eQ-4vs" id="eGO-Su-MuU"/>
                         <outlet property="tap2Recogniser" destination="uvh-PA-PQZ" id="R1y-L9-V5X"/>
                         <outlet property="tap3Recogniser" destination="2Hd-oo-Gn2" id="pAJ-Iv-HOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer delaysTouchesBegan="YES" id="Qhy-kH-zpm" userLabel="Tap1 Gesture Recognizer">
+                <pongPressGestureRecognizer delaysTouchesBegan="YES" allowableMovement="10" minimumPressDuration="0.20000000000000001" id="zbB-eQ-4vs">
                     <connections>
-                        <action selector="onTap1:" destination="BYZ-38-t0r" id="3uM-ye-8Nr"/>
+                        <action selector="onTap1:" destination="BYZ-38-t0r" id="2zV-LI-d0C"/>
                     </connections>
-                </tapGestureRecognizer>
+                </pongPressGestureRecognizer>
                 <tapGestureRecognizer delaysTouchesBegan="YES" numberOfTapsRequired="2" id="uvh-PA-PQZ" userLabel="Tap2 Gesture Recognizer">
                     <connections>
                         <action selector="onTap2:" destination="BYZ-38-t0r" id="8Wt-kQ-KvS"/>

@@ -388,16 +388,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 		replaceWithFiltered()
 	}
 	
-	@IBOutlet var tap1Recogniser: UITapGestureRecognizer!
+	@IBOutlet var tap1Recogniser: UILongPressGestureRecognizer!
 	@IBOutlet var tap2Recogniser: UITapGestureRecognizer!
 	@IBOutlet var tap3Recogniser: UITapGestureRecognizer!
 
-	@IBAction func onTap1(sender: UITapGestureRecognizer) {
-		if sender.delaysTouchesBegan{
-			print("touchbeg")
-		}
-		if sender.delaysTouchesEnded{
-			print("touchend")
+	@IBAction func onTap1(sender: UILongPressGestureRecognizer) {
+		switch sender.state {
+		case .Began:
+			compareButtonDown(UIButton())
+		case .Ended:
+			compareButtonUp(UIButton())
+		default:
+			print("something else")
 		}
 	}
 	
@@ -414,7 +416,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 	func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
 		return self.filteredImageView
 	}
-	
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 		if (segue.identifier == "toFiltersTable") {
