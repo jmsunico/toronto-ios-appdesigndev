@@ -11,18 +11,89 @@
 		FA1908D91D257617001C2558 /* RGBAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1908D61D257617001C2558 /* RGBAImage.swift */; };
 		FA1908DA1D257617001C2558 /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1908D71D257617001C2558 /* Workflow.swift */; };
 		FA37E81E1D36BE3200C35534 /* AssignmentInstructions.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA37E81D1D36BE3200C35534 /* AssignmentInstructions.rtf */; };
+		FA41701C1D4FCD980027C42C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA41701A1D4FCD980027C42C /* Interface.storyboard */; };
+		FA41701E1D4FCD980027C42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA41701D1D4FCD980027C42C /* Assets.xcassets */; };
+		FA4170251D4FCD980027C42C /* FilterWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA4170241D4FCD980027C42C /* FilterWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA41702A1D4FCD980027C42C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4170291D4FCD980027C42C /* InterfaceController.swift */; };
+		FA41702C1D4FCD980027C42C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41702B1D4FCD980027C42C /* ExtensionDelegate.swift */; };
+		FA41702E1D4FCD980027C42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA41702D1D4FCD980027C42C /* Assets.xcassets */; };
+		FA4170321D4FCD980027C42C /* FilterWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA4170181D4FCD980027C42C /* FilterWatch.app */; };
+		FA4170421D5008400027C42C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4170411D5008400027C42C /* AppDelegate.swift */; };
+		FA4170441D5008400027C42C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4170431D5008400027C42C /* ViewController.swift */; };
+		FA4170471D5008400027C42C /* FilterTV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA4170451D5008400027C42C /* FilterTV.xcdatamodeld */; };
+		FA41704A1D5008400027C42C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4170481D5008400027C42C /* Main.storyboard */; };
+		FA41704C1D5008400027C42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA41704B1D5008400027C42C /* Assets.xcassets */; };
 		FA7FD3C71D1D1C4C0073F30B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FD3C61D1D1C4C0073F30B /* AppDelegate.swift */; };
 		FA7FD3C91D1D1C4C0073F30B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FD3C81D1D1C4C0073F30B /* ViewController.swift */; };
 		FA7FD3CC1D1D1C4C0073F30B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7FD3CA1D1D1C4C0073F30B /* Main.storyboard */; };
 		FA7FD3CE1D1D1C4C0073F30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7FD3CD1D1D1C4C0073F30B /* Assets.xcassets */; };
 		FA7FD3D11D1D1C4C0073F30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7FD3CF1D1D1C4C0073F30B /* LaunchScreen.storyboard */; };
+		FA9969821D47BA7B00567EFC /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9969811D47BA7B00567EFC /* PhotoView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA4170261D4FCD980027C42C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7FD3BB1D1D1C4C0073F30B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA4170231D4FCD980027C42C;
+			remoteInfo = "FilterWatch Extension";
+		};
+		FA4170301D4FCD980027C42C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7FD3BB1D1D1C4C0073F30B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA4170171D4FCD980027C42C;
+			remoteInfo = FilterWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA4170381D4FCD980027C42C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FA4170251D4FCD980027C42C /* FilterWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41703A1D4FCD980027C42C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FA4170321D4FCD980027C42C /* FilterWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA1908D51D257617001C2558 /* imageFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageFilters.swift; sourceTree = "<group>"; };
 		FA1908D61D257617001C2558 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
 		FA1908D71D257617001C2558 /* Workflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
 		FA37E81D1D36BE3200C35534 /* AssignmentInstructions.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = AssignmentInstructions.rtf; sourceTree = "<group>"; };
+		FA4170181D4FCD980027C42C /* FilterWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA41701B1D4FCD980027C42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FA41701D1D4FCD980027C42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA41701F1D4FCD980027C42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4170241D4FCD980027C42C /* FilterWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FilterWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4170291D4FCD980027C42C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FA41702B1D4FCD980027C42C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FA41702D1D4FCD980027C42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA41702F1D4FCD980027C42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA41703F1D5008400027C42C /* FilterTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4170411D5008400027C42C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA4170431D5008400027C42C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA4170461D5008400027C42C /* FilterTV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilterTV.xcdatamodel; sourceTree = "<group>"; };
+		FA4170491D5008400027C42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA41704B1D5008400027C42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA41704D1D5008400027C42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7FD3C31D1D1C4C0073F30B /* image-processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "image-processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7FD3C61D1D1C4C0073F30B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7FD3C81D1D1C4C0073F30B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,9 +102,24 @@
 		FA7FD3D01D1D1C4C0073F30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7FD3D21D1D1C4C0073F30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7FD3DA1D1D1D6B0073F30B /* imageProcessor.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = imageProcessor.playground; sourceTree = "<group>"; };
+		FA9969811D47BA7B00567EFC /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA4170211D4FCD980027C42C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41703C1D5008400027C42C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA7FD3C01D1D1C4C0073F30B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,12 +130,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4170191D4FCD980027C42C /* FilterWatch */ = {
+			isa = PBXGroup;
+			children = (
+				FA41701A1D4FCD980027C42C /* Interface.storyboard */,
+				FA41701D1D4FCD980027C42C /* Assets.xcassets */,
+				FA41701F1D4FCD980027C42C /* Info.plist */,
+			);
+			path = FilterWatch;
+			sourceTree = "<group>";
+		};
+		FA4170281D4FCD980027C42C /* FilterWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA4170291D4FCD980027C42C /* InterfaceController.swift */,
+				FA41702B1D4FCD980027C42C /* ExtensionDelegate.swift */,
+				FA41702D1D4FCD980027C42C /* Assets.xcassets */,
+				FA41702F1D4FCD980027C42C /* Info.plist */,
+			);
+			path = "FilterWatch Extension";
+			sourceTree = "<group>";
+		};
+		FA4170401D5008400027C42C /* FilterTV */ = {
+			isa = PBXGroup;
+			children = (
+				FA4170411D5008400027C42C /* AppDelegate.swift */,
+				FA4170431D5008400027C42C /* ViewController.swift */,
+				FA4170481D5008400027C42C /* Main.storyboard */,
+				FA41704B1D5008400027C42C /* Assets.xcassets */,
+				FA41704D1D5008400027C42C /* Info.plist */,
+				FA4170451D5008400027C42C /* FilterTV.xcdatamodeld */,
+			);
+			path = FilterTV;
+			sourceTree = "<group>";
+		};
 		FA7FD3BA1D1D1C4C0073F30B = {
 			isa = PBXGroup;
 			children = (
 				FA37E81D1D36BE3200C35534 /* AssignmentInstructions.rtf */,
 				FA7FD3DA1D1D1D6B0073F30B /* imageProcessor.playground */,
 				FA7FD3C51D1D1C4C0073F30B /* image-processor */,
+				FA4170191D4FCD980027C42C /* FilterWatch */,
+				FA4170281D4FCD980027C42C /* FilterWatch Extension */,
+				FA4170401D5008400027C42C /* FilterTV */,
 				FA7FD3C41D1D1C4C0073F30B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				FA7FD3C31D1D1C4C0073F30B /* image-processor.app */,
+				FA4170181D4FCD980027C42C /* FilterWatch.app */,
+				FA4170241D4FCD980027C42C /* FilterWatch Extension.appex */,
+				FA41703F1D5008400027C42C /* FilterTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1908D51D257617001C2558 /* imageFilters.swift */,
+				FA9969811D47BA7B00567EFC /* PhotoView.swift */,
 				FA1908D61D257617001C2558 /* RGBAImage.swift */,
 				FA1908D71D257617001C2558 /* Workflow.swift */,
 				FA7FD3C61D1D1C4C0073F30B /* AppDelegate.swift */,
@@ -81,6 +208,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA4170171D4FCD980027C42C /* FilterWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4170391D4FCD980027C42C /* Build configuration list for PBXNativeTarget "FilterWatch" */;
+			buildPhases = (
+				FA4170161D4FCD980027C42C /* Resources */,
+				FA4170381D4FCD980027C42C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA4170271D4FCD980027C42C /* PBXTargetDependency */,
+			);
+			name = FilterWatch;
+			productName = FilterWatch;
+			productReference = FA4170181D4FCD980027C42C /* FilterWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FA4170231D4FCD980027C42C /* FilterWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4170371D4FCD980027C42C /* Build configuration list for PBXNativeTarget "FilterWatch Extension" */;
+			buildPhases = (
+				FA4170201D4FCD980027C42C /* Sources */,
+				FA4170211D4FCD980027C42C /* Frameworks */,
+				FA4170221D4FCD980027C42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FilterWatch Extension";
+			productName = "FilterWatch Extension";
+			productReference = FA4170241D4FCD980027C42C /* FilterWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		FA41703E1D5008400027C42C /* FilterTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA41704E1D5008400027C42C /* Build configuration list for PBXNativeTarget "FilterTV" */;
+			buildPhases = (
+				FA41703B1D5008400027C42C /* Sources */,
+				FA41703C1D5008400027C42C /* Frameworks */,
+				FA41703D1D5008400027C42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FilterTV;
+			productName = FilterTV;
+			productReference = FA41703F1D5008400027C42C /* FilterTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FA7FD3C21D1D1C4C0073F30B /* image-processor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA7FD3D51D1D1C4C0073F30B /* Build configuration list for PBXNativeTarget "image-processor" */;
@@ -88,10 +266,12 @@
 				FA7FD3BF1D1D1C4C0073F30B /* Sources */,
 				FA7FD3C01D1D1C4C0073F30B /* Frameworks */,
 				FA7FD3C11D1D1C4C0073F30B /* Resources */,
+				FA41703A1D4FCD980027C42C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA4170311D4FCD980027C42C /* PBXTargetDependency */,
 			);
 			name = "image-processor";
 			productName = "image-processor";
@@ -108,6 +288,15 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "José-María Súnico";
 				TargetAttributes = {
+					FA4170171D4FCD980027C42C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					FA4170231D4FCD980027C42C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					FA41703E1D5008400027C42C = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					FA7FD3C21D1D1C4C0073F30B = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -127,11 +316,40 @@
 			projectRoot = "";
 			targets = (
 				FA7FD3C21D1D1C4C0073F30B /* image-processor */,
+				FA4170171D4FCD980027C42C /* FilterWatch */,
+				FA4170231D4FCD980027C42C /* FilterWatch Extension */,
+				FA41703E1D5008400027C42C /* FilterTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA4170161D4FCD980027C42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41701E1D4FCD980027C42C /* Assets.xcassets in Resources */,
+				FA41701C1D4FCD980027C42C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4170221D4FCD980027C42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41702E1D4FCD980027C42C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41703D1D5008400027C42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41704C1D5008400027C42C /* Assets.xcassets in Resources */,
+				FA41704A1D5008400027C42C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA7FD3C11D1D1C4C0073F30B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +364,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA4170201D4FCD980027C42C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA41702C1D4FCD980027C42C /* ExtensionDelegate.swift in Sources */,
+				FA41702A1D4FCD980027C42C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA41703B1D5008400027C42C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4170441D5008400027C42C /* ViewController.swift in Sources */,
+				FA4170471D5008400027C42C /* FilterTV.xcdatamodeld in Sources */,
+				FA4170421D5008400027C42C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA7FD3BF1D1D1C4C0073F30B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +390,7 @@
 				FA7FD3C91D1D1C4C0073F30B /* ViewController.swift in Sources */,
 				FA1908D91D257617001C2558 /* RGBAImage.swift in Sources */,
 				FA1908D81D257617001C2558 /* imageFilters.swift in Sources */,
+				FA9969821D47BA7B00567EFC /* PhotoView.swift in Sources */,
 				FA7FD3C71D1D1C4C0073F30B /* AppDelegate.swift in Sources */,
 				FA1908DA1D257617001C2558 /* Workflow.swift in Sources */,
 			);
@@ -160,7 +398,36 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FA4170271D4FCD980027C42C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA4170231D4FCD980027C42C /* FilterWatch Extension */;
+			targetProxy = FA4170261D4FCD980027C42C /* PBXContainerItemProxy */;
+		};
+		FA4170311D4FCD980027C42C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA4170171D4FCD980027C42C /* FilterWatch */;
+			targetProxy = FA4170301D4FCD980027C42C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		FA41701A1D4FCD980027C42C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA41701B1D4FCD980027C42C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		FA4170481D5008400027C42C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4170491D5008400027C42C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		FA7FD3CA1D1D1C4C0073F30B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -180,6 +447,96 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA4170331D4FCD980027C42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FilterWatch_Extension;
+				INFOPLIST_FILE = FilterWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmsunico.image-processor.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		FA4170341D4FCD980027C42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = FilterWatch_Extension;
+				INFOPLIST_FILE = FilterWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmsunico.image-processor.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		FA4170351D4FCD980027C42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FilterWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmsunico.image-processor.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		FA4170361D4FCD980027C42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FilterWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmsunico.image-processor.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		FA41704F1D5008400027C42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = FilterTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmsunico.FilterTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		FA4170501D5008400027C42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = FilterTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmsunico.FilterTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
 		FA7FD3D31D1D1C4C0073F30B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,6 +647,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA4170371D4FCD980027C42C /* Build configuration list for PBXNativeTarget "FilterWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4170351D4FCD980027C42C /* Debug */,
+				FA4170361D4FCD980027C42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA4170391D4FCD980027C42C /* Build configuration list for PBXNativeTarget "FilterWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4170331D4FCD980027C42C /* Debug */,
+				FA4170341D4FCD980027C42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA41704E1D5008400027C42C /* Build configuration list for PBXNativeTarget "FilterTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA41704F1D5008400027C42C /* Debug */,
+				FA4170501D5008400027C42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FA7FD3BE1D1D1C4C0073F30B /* Build configuration list for PBXProject "image-processor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -309,6 +690,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA4170451D5008400027C42C /* FilterTV.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA4170461D5008400027C42C /* FilterTV.xcdatamodel */,
+			);
+			currentVersion = FA4170461D5008400027C42C /* FilterTV.xcdatamodel */;
+			path = FilterTV.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA7FD3BB1D1D1C4C0073F30B /* Project object */;
 }

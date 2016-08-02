@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 	
 	@IBOutlet weak var onNewLabel: UIButton!
 	@IBOutlet weak var onShareLabel: UIButton!
+	@IBOutlet weak var socialLabel: UIButton!
 	@IBOutlet weak var filterButtonLabel: UIButton!
 	@IBOutlet weak var compareButton: UIButton!
 	
@@ -147,6 +148,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 		// Do any additional setup after loading the view, typically from a nib.
 		onNewLabel.setImage(UIImage(named:"NewPhoto"), forState: UIControlState.Normal)
 		onShareLabel.setImage(UIImage(named:"Share"), forState: UIControlState.Normal)
+		socialLabel.setImage(UIImage(named:"Share"), forState: UIControlState.Normal)
 		filterButtonLabel.setImage(UIImage(named:"Filter"), forState: UIControlState.Normal)
 		filterButtonLabel.setImage(UIImage(named:"Filter"), forState: UIControlState.Selected)
 		compareButton.setImage(UIImage(named:"Compare"), forState: UIControlState.Normal)
@@ -389,9 +391,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 	}
 	
 	@IBOutlet var tap1Recogniser: UILongPressGestureRecognizer!
-	@IBOutlet var tap2Recogniser: UITapGestureRecognizer!
-	@IBOutlet var tap3Recogniser: UITapGestureRecognizer!
-
 	@IBAction func onTap1(sender: UILongPressGestureRecognizer) {
 		switch sender.state {
 		case .Began:
@@ -399,15 +398,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 		case .Ended:
 			compareButtonUp(UIButton())
 		default:
-			print("something else")
+			break
 		}
 	}
 	
+	@IBOutlet var tap2Recogniser: UITapGestureRecognizer!
 	@IBAction func onTap2(sender: UITapGestureRecognizer) {
 		print("2tap")
 		self.imageScrollView.setZoomScale(self.imageScrollView.zoomScale * 2.0, animated: true)
 	}
 	
+	@IBOutlet var tap3Recogniser: UITapGestureRecognizer!
 	@IBAction func onTap3(sender: UITapGestureRecognizer) {
 		print("3tap")
 		self.imageScrollView.setZoomScale(self.imageScrollView.zoomScale / 2.0, animated: true)
@@ -418,11 +419,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-		if (segue.identifier == "toFiltersTable") {
-			print("this")
+		if (segue.identifier == "toSocial") {
+			print("Preparing segue toSocial")
+			let destination = segue.destinationViewController
 		}
 		else{
-			print("that")
+			print("Some other segue")
 		}
 	}
 	

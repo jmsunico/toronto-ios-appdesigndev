@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FilterTV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>FilterWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>image-processor.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>FA4170171D4FCD980027C42C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA41703E1D5008400027C42C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>FA7FD3C21D1D1C4C0073F30B</key>
 		<dict>
 			<key>primary</key>

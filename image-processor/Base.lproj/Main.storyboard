@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,7 +21,7 @@
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.25" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="QjE-tA-uVq">
                                 <rect key="frame" x="0.0" y="20" width="414" height="628"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-ZC-bq7" userLabel="filtered">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-ZC-bq7" userLabel="filtered" customClass="PhotoView" customModule="image_processor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -40,15 +40,16 @@
                                     <outletCollection property="gestureRecognizers" destination="zbB-eQ-4vs" appends="YES" id="3di-0O-mDT"/>
                                 </connections>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-cb-B5d">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nnq-cb-B5d">
                                 <rect key="frame" x="0.0" y="648" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-rQ-PZC">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="44"/>
-                                        <accessibility key="accessibilityConfiguration">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to load a new photo from camera or album" identifier="onNewPhoto">
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
-                                        <state key="normal" title="New">
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="New" backgroundImage="NewPhoto">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -56,8 +57,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkp-C3-534">
-                                        <rect key="frame" x="76" y="0.0" width="85.5" height="44"/>
-                                        <state key="normal" title="Filter">
+                                        <rect key="frame" x="83" y="0.0" width="83" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to access filtering options" identifier="onFilter">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Filter" backgroundImage="Filter">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -65,8 +70,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-hN-fn0">
-                                        <rect key="frame" x="161" y="0.0" width="154.5" height="44"/>
-                                        <state key="normal" title="Compare">
+                                        <rect key="frame" x="166" y="0.0" width="83" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to compare current image with last saved one" identifier="onCompare">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Compare" backgroundImage="Compare">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -75,12 +84,29 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrI-5e-ZrA">
-                                        <rect key="frame" x="316" y="0.0" width="98" height="44"/>
-                                        <state key="normal" title="Share">
+                                        <rect key="frame" x="249" y="0.0" width="83" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to share" identifier="onShare">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Share" backgroundImage="Share">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJE-DC-o66"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-4D-Z2s">
+                                        <rect key="frame" x="331" y="0.0" width="83" height="44"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to access social features" identifier="onSocial">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Share" backgroundImage="Share">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EnJ-Bp-B3X" kind="presentation" identifier="toSocial" id="xoP-ro-Fyn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -137,6 +163,7 @@
                         <outlet property="redButtonLabel" destination="LT8-SO-TII" id="ocp-7B-SHK"/>
                         <outlet property="scaleButtonLabel" destination="3P6-zk-iZn" id="rXT-oA-VVz"/>
                         <outlet property="sliderValue" destination="vgd-Tg-mCa" id="yu0-fy-ffG"/>
+                        <outlet property="socialLabel" destination="UoS-4D-Z2s" id="ncE-Cu-8pC"/>
                         <outlet property="solarisationButtonLabel" destination="2Z7-Kl-f92" id="qsL-jt-JCy"/>
                         <outlet property="tap1Recogniser" destination="zbB-eQ-4vs" id="eGO-Su-MuU"/>
                         <outlet property="tap2Recogniser" destination="uvh-PA-PQZ" id="R1y-L9-V5X"/>
@@ -184,8 +211,8 @@
                                                 <action selector="onSaveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1r-gm-wAC"/>
                                             </connections>
                                         </button>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-125" maxValue="125" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kt-C8b">
-                                            <rect key="frame" x="68" y="0.0" width="296" height="45"/>
+                                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-125" maxValue="125" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kt-C8b">
+                                            <rect key="frame" x="68" y="0.0" width="288" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="XhH-bH-O90"/>
                                                 <constraint firstAttribute="height" constant="44" id="vwf-k8-bTD"/>
@@ -195,7 +222,7 @@
                                             </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgd-Tg-mCa">
-                                            <rect key="frame" x="372" y="0.0" width="23" height="44"/>
+                                            <rect key="frame" x="364" y="0.0" width="31" height="44"/>
                                             <accessibility key="accessibilityConfiguration" hint="Slider Value"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="132" id="E0q-jH-kpT"/>
@@ -369,8 +396,119 @@
             </objects>
             <point key="canvasLocation" x="271" y="474"/>
         </scene>
+        <!--Social-->
+        <scene sceneID="nOt-yH-2ua">
+            <objects>
+                <viewController id="tmW-pt-vNq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pde-mZ-nxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fb8-GP-peV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YKu-Co-qqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc7-f0-kiA">
+                                <rect key="frame" x="185" y="353" width="45" height="30"/>
+                                <state key="normal" title="PUSH!"/>
+                                <connections>
+                                    <segue destination="eZd-gB-5Hr" kind="show" id="Amt-j1-S72"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.88235294117647056" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social" id="bjt-lb-YV3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="oDr-Pv-SH6"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IgK-Ip-CaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="482"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="U9N-Wa-mag">
+            <objects>
+                <viewController id="eZd-gB-5Hr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XEr-Jd-nbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="n8R-3O-CAE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bDn-Uq-a8v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="IIz-7b-MmY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZp-4u-u3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vBo-te-FwB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nYz-QJ-yGJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="9oi-YU-Mcv"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tMV-Qy-uYh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tmW-pt-vNq" kind="relationship" relationship="rootViewController" id="4fo-DR-vDK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJl-in-KXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="408"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4HV-kQ-GrW">
+            <objects>
+                <viewController id="Obq-r9-pYB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6pa-aw-bBY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wsq-Ch-9zZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="45R-14-1jy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.13348830554765345" blue="0.30231539231220583" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="ZFs-nd-XrZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSc-FN-neL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="1318"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Oil-pu-lh5">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EnJ-Bp-B3X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="L0l-fo-kko">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nYz-QJ-yGJ" kind="relationship" relationship="viewControllers" id="Tr4-FP-xfZ"/>
+                        <segue destination="Obq-r9-pYB" kind="relationship" relationship="viewControllers" id="kkp-ak-D7F"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLu-O2-4rw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="408"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Compare" width="44" height="44"/>
+        <image name="Filter" width="44" height="44"/>
+        <image name="NewPhoto" width="44" height="44"/>
+        <image name="Share" width="44" height="44"/>
         <image name="landscape" width="1280" height="853"/>
     </resources>
 </document>
